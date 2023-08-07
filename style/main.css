@@ -510,7 +510,6 @@ hr {
     -ms-transform: scale(1);
     transform: scale(1); } }
 .tile-merged .tile-inner {
-  z-index: 20;
   -webkit-animation: pop 200ms ease 100ms;
   -moz-animation: pop 200ms ease 100ms;
   animation: pop 200ms ease 100ms;
