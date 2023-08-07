@@ -43,7 +43,8 @@
       <a class="restart-button">New Game</a>
     </div>
     <div class="popup" id="popup">
-      <p>If you may, please visit our team's project! <a href="https://2023.igem.wiki/shsid-china/" target="_blank">iGEM Team E.Cool-i (SHISD-China)</a></p>
+      <p>Ahoy! We BEG you to visit our team's project! <a href="https://2023.igem.wiki/shsid-china/" target="_blank">iGEM Team E.Cool-i (SHISD-China)</a></p>
+      <p>(It is about biosafety and takes no time, if you are interested /ᐠ｡‸｡ᐟ\)</p>
       <p><em>Click here to close the popup. Thanks for your time~!</em></p>
     </div>
     <div class="game-container">
@@ -104,8 +105,8 @@
       }
       popupTrigger.addEventListener("click", showPopup);
       popupCloseButton.addEventListener("click", hidePopup);
-      window.addEventListener("click", function (event) {
-        if (event.target === popup) {
+      document.addEventListener("click", function (event) {
+        if (event.target !== popup && !popup.contains(event.target)) {
           hidePopup();
         }
       });
