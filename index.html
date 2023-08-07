@@ -32,6 +32,15 @@
       <a class="restart-button">New Game</a>
     </div>
 
+    <!-- 弹窗容器 -->
+    <div id="popup-container" class="popup-hidden">
+      <div id="popup-content" class="popup-content">
+        <p>If you may, please visit our team's project! <a href="https://www.baidu.com" target="_blank">www.baidu.com</a></p>
+        <p><em>Click anywhere to close the popup.</em></p>
+        <button id="popup-close">Close</button>
+      </div>
+    </div>
+
     <div class="game-container">
       <div class="game-message">
         <p></p>
@@ -81,6 +90,37 @@
     Modified by <a href="https://2023.igem.wiki/shsid-china/" target="_blank">iGEM Team E.cool-i (SHSID-China)</a>; art by @Amber, coded by <a href="https://github.com/Abyss-Seeker" target="_blank">@AbyssSeeker!</a> and @lalaneko. Originally created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
     </p>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const popupContainer = document.getElementById("popup-container");
+      const popupContent = document.getElementById("popup-content");
+      const popupCloseButton = document.getElementById("popup-close");
+
+      // 显示弹窗
+      function showPopup() {
+        popupContainer.classList.remove("popup-hidden");
+      }
+
+      // 隐藏弹窗
+      function hidePopup() {
+        popupContainer.classList.add("popup-hidden");
+      }
+
+      // 点击关闭按钮时隐藏弹窗
+      popupCloseButton.addEventListener("click", hidePopup);
+
+      // 在页面加载后显示弹窗
+      showPopup();
+
+      // 监听点击事件，如果点击在弹窗之外，则隐藏弹窗
+      document.addEventListener("click", function (event) {
+        if (event.target !== popupContent && !popupContent.contains(event.target)) {
+          hidePopup();
+        }
+      });
+    });
+  </script>
 
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
