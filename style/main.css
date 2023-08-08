@@ -322,7 +322,7 @@ hr {
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform;
-  background-size: cover;}
+  background-size: contain; }
   .tile .tile-inner {
     border-radius: 3px;
     background: #eee4da;
