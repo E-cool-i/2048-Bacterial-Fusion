@@ -1,7 +1,7 @@
 # 2048 Bacterial Fusion
 A modification on [2048](https://github.com/gabrielecirulli/2048), which is a small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024), based on [Saming's 2048](http://saming.fr/p/2048/) (also a clone).
 
-Made just for fun. [Play it here!](https://abyss-seeker.github.io/2048-114514/)
+Made just for fun. [Play it here!](https://e-cool-i.github.io/2048-Bacterial-Fusion/)
 
 ### Contributions
 
